@@ -129,12 +129,12 @@ header {
     display: inline-block;
     padding: 12px 20px;
     margin-right: 10px;
-    background: #050505; 
-    color: white;
+    background: #FFFFFF; 
+    color: #050505;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    border: 2px solid #050505;
+    border: 2px solid #FFFFFF;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
