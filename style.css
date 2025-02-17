@@ -336,3 +336,36 @@ header {
     left: 0;
   }
   
+
+  /*SKILLS*/
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .skill-box {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .skill-box:hover {
+    transform: scale(1.05);
+  }
+  .skill-box i {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: #FFFFFF;
+  }
+  p {
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  
