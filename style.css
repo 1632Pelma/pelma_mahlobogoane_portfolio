@@ -223,4 +223,69 @@ header {
     text-align: justify;
   }
 
+  /* Education Section */
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .education-box {
+    border: 2px solid #FFFFFF; 
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #2a2a2a; 
+  }
+  .education-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    border-radius: 5px; 
+  }
+  .education-text {
+    font-size: 14px; 
+  }
+  .education-text {
+    font-size: 14px; 
+    color: #FFFFFF; 
+  }
   
+  .education-text h3 {
+    font-size: 16px; 
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+  .education-text p {
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .education-text h4 {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 8px;
+  }
+  .education-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+  }
+  .education-box ul li {
+    font-size: 13px;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 3px;
+  }
+  .education-box ul li::before {
+    content: "•";
+    color: #FFFFFF;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
