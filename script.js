@@ -114,3 +114,80 @@ if (certFilterButtons.length > 0 && certItems.length > 0) {
             });
         });
     });
+
+     /*Chatbot Js */
+  document.addEventListener("DOMContentLoaded", function () {
+    function getChatbotResponse(userInput) {
+        userInput = userInput.toLowerCase().trim();
+    
+        // Fuzzy matching using keyword recognition
+        const keywords = {
+            "hello": "Hi there! How can I help you?",
+            "who are you": "I'm Pelma's chatbot, here to assist you with questions about her portfolio!",
+            "what is your name": "I'm a simple chatbot designed for Pelma's portfolio.",
+            "tell me about pelma": "Pelma is a passionate software developer with experience in web development, Java, Python, and machine learning.",
+            "tell me about her skills": "Pelma is skilled in Java, JavaScript, Python, HTML, CSS, PHP, MySQL, and more!",
+            "tell me about her projects": "Pelma has worked on web applications, Java projects, and machine learning models. Check out the Portfolio section for more details!",
+            "how do i contact pelma": "You can reach Pelma via email at pelmamonere@gmail.com or call +27 71 157 9048.",
+            "what experience does pelma have": "Pelma has hands-on experience with web development, software development, and machine learning projects.",
+            "tell me about her education": "Pelma holds a diploma in Information Technology from Vaal University of Technology, specializing in Software Development, and is pursuing an Advanced Diploma.",
+            "frameworks": "Pelma has worked with frameworks like React, Angular, and Laravel for web development.",
+            "Programming languages": "Pelma is proficient in Java, JavaScript, HTML, CSS, PHP, Python, and SQL.",
+            "portfolio": "You can explore Pelma's portfolio in the 'Portfolio' section of the website to see her projects.",
+            "availability": "Pelma is currently open to freelance projects and job opportunities. Feel free to reach out through the Contact section.",
+            "learning": "Pelma is always eager to learn new technologies and stay updated with the latest trends in tech.",
+            "location": "Pelma is based in South Africa.",
+            "certification": "Pelma has completed several certifications related to software development and machine learning.",
+            "bye": "Goodbye! Have a great day!"
+        };
+    
+        // Iterate through keywords and match with the user input
+        for (const keyword in keywords) {
+            if (userInput.includes(keyword)) {
+                return keywords[keyword];
+            }
+        }
+    
+        return "I'm not sure about that. Try asking about Pelma's skills, projects, or contact info!";
+    }
+});
+
+
+    const chatBubble = document.getElementById("chat-bubble");
+    const chatContainer = document.getElementById("chatbot");
+    const chatBody = document.getElementById("chat-body");
+    const chatInput = document.getElementById("chat-input");
+    const chatSend = document.getElementById("chat-send");
+    const closeChat = document.getElementById("close-chat");
+
+    chatBubble.addEventListener("click", () => {
+        chatContainer.classList.toggle("open");
+    });
+
+    closeChat.addEventListener("click", () => {
+        chatContainer.classList.remove("open");
+    });
+
+    function addMessage(text, sender) {
+        const msgDiv = document.createElement("div");
+        msgDiv.className = sender;
+        msgDiv.textContent = text;
+        chatBody.appendChild(msgDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    chatSend.addEventListener("click", () => {
+        const userText = chatInput.value.trim();
+        if (userText) {
+            addMessage( userText, "user");
+            const botResponse = getChatbotResponse(userText);
+            setTimeout(() => addMessage(botResponse, "bot"), 500);
+            chatInput.value = "";
+        }
+    });
+
+    chatInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            chatSend.click();
+        }
+    });
