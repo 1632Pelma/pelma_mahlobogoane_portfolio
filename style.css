@@ -795,6 +795,7 @@ footer {
 .user {
   background-color: #e4e6eb;
   color: black;
+  color: #4169e1;
   padding: 10px;
   border-radius: 20px;
   align-self: flex-end;
