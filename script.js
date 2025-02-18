@@ -99,4 +99,18 @@ if (certFilterButtons.length > 0 && certItems.length > 0) {
         if (e.target !== document.getElementById("lightbox-img")) closeLightbox();
     });
 
-    
+    // Filter Buttons Logic for Projects (same as before)
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            document.querySelectorAll('.project-item').forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
