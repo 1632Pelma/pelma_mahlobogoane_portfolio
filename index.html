@@ -321,19 +321,16 @@
       </p>
   </div>
   
-    <div class="contact-form">
-      <form action="your-server-endpoint" method="POST">
+  <div class="contact-form">
+    <form id="contact-form">
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-       
         <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
-
         <button type="submit" class="cta-button">Send Message</button>
-      </form>
-    </div>
-  </div>
+    </form>
+    <p id="success-message" style="display: none; color: green;">Message sent successfully!</p>
+</div>
+
 </section>
 
 <div id="chat-bubble">💬</div>

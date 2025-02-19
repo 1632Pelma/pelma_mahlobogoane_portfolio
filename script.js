@@ -190,3 +190,34 @@ if (certFilterButtons.length > 0 && certItems.length > 0) {
         });
     });
     
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+        const successMessage = document.getElementById("success-message");
+    
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+    
+            // Get input values
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+    
+            // Validate input fields
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+    
+            // Simulate successful submission
+            successMessage.style.display = "block";
+    
+            // Clear form fields
+            form.reset();
+    
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                successMessage.style.display = "none";
+            }, 3000);
+        });
+    });
+    
