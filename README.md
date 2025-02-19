@@ -33,11 +33,13 @@ This portfolio is a **responsive, interactive, and modern** web application desi
 ```
 
 ## 📜 **How to Use**
-1. **Clone the repository:**
+1. **View Live Demo [View portfolio}(https://pelma-mahlobogoane-portfolio.netlify.app/)
+   
+2. **Clone the repository:**
    ```sh
    git clone https://github.com/1632Pelma/pelma_mahlobogoane_portfolio.git
    ```
-2. **Open the `index.html` file** in your web browser.
+3. **Open the `index.html` file** in your web browser.
 
 ## 📬 **Contact Me**
 If you’d like to collaborate, work with me, or have any questions, feel free to reach out:
